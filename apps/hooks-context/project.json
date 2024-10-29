@@ -1,0 +1,9 @@
+{
+  "name": "hooks-context",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/hooks-context/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project hooks-context --web",
+  "targets": {}
+}
