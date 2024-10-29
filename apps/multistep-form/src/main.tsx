@@ -1,12 +1,16 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { RouterProvider } from './providers';
+
+import App from './app/app';
+import { FormProvider } from './store/FormContext/FormProvider';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <StrictMode>
-    <RouterProvider />
+    <FormProvider>
+      <App />
+    </FormProvider>
   </StrictMode>
 );

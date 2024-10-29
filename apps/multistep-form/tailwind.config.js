@@ -1,6 +1,6 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
-const flowbite = require("flowbite-react/tailwind");
 const { join } = require('path');
+const flowbite = require("flowbite-react/tailwind");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -17,5 +17,6 @@ module.exports = {
   },
   plugins: [
     flowbite.plugin(),
-  ]
+    require('@tailwindcss/forms'),
+  ],
 };

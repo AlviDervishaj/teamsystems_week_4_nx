@@ -1,5 +1,4 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
-const flowbite = require("flowbite-react/tailwind");
 const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
@@ -9,13 +8,10 @@ module.exports = {
       __dirname,
       '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
     ),
-    flowbite.content(),
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
     extend: {},
   },
-  plugins: [
-    flowbite.plugin(),
-  ]
+  plugins: [],
 };

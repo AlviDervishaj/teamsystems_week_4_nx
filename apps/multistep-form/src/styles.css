@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* You can add global styles to this file, and also import other style files */
+
+@layer base {
+  body {
+    @apply bg-slate-900/80 text-slate-200 text-lg;
+  }
+  #root {
+    @apply w-dvw min-h-dvh max-h-fit;
+  }
+}
