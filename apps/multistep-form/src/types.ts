@@ -17,6 +17,19 @@ export type FormContextType = {
   goToStep: (step: number) => void,
   updateUser: (properties: Partial<InformationType>) => void,
   goBack: () => void,
+  deleteUser: () => void,
 };
 
+
+export type StepsType = {
+  step: number,
+  title: string,
+  to: string,
+}
+
+export type InputType = {
+  title: string,
+  placeholder: string,
+  defaultValue?: string
+}
 

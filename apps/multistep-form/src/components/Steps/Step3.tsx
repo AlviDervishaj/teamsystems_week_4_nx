@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react"
 import { Input } from "../../../ui/Input";
 import { FormWrapper } from "../FormWrapper";
 import { useFormContext } from "../../store/FormContext/useFormContext";
+import { v7 } from "uuid";
 
 export const Step3 = () => {
   const [error, setError] = useState<string>("");
@@ -17,7 +18,7 @@ export const Step3 = () => {
       setError("Please fill in the form correctly !");
       return;
     }
-    updateUser({ companyCode: formData.companyCode as string })
+    updateUser({ companyCode: formData.companyCode as string, id: v7() })
     proceedToNextStep();
   }
   return (

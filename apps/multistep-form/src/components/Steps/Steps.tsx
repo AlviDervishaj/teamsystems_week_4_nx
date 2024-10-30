@@ -1,11 +1,6 @@
 import clsx from "clsx";
 import { useFormContext } from "../../store/FormContext/useFormContext";
-
-type StepsType = {
-  step: number,
-  title: string,
-  to: string,
-}
+import { StepsType } from "../../types";
 
 const StepsTitles = [
   "Personal Info",

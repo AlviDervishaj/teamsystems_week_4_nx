@@ -4,17 +4,18 @@ import { FormContext } from "./FormContext";
 import { v7 } from "uuid";
 
 const maxSteps = 3;
+const initialUserValue: InformationType = {
+  id: "",
+  age: "",
+  lastName: "",
+  firstName: "",
+  gender: "",
+  companyCode: "",
+}
 
 export const FormProvider = ({ children }: { children: ReactNode }) => {
   const [step, setStep] = useState<number>(0);
-  const [user, setUser] = useState<InformationType>({
-    id: "",
-    age: "",
-    lastName: "",
-    firstName: "",
-    gender: "",
-    companyCode: "",
-  });
+  const [user, setUser] = useState<InformationType>(initialUserValue);
 
   const logOut = useCallback(() => null, []);
 
@@ -41,15 +42,25 @@ export const FormProvider = ({ children }: { children: ReactNode }) => {
     setStep(_step => _step - 1 < 0 ? 0 : _step - 1);
   }, [])
 
+  const deleteUser = useCallback(() => {
+    localStorage.removeItem("formData");
+    setUser(initialUserValue);
+    setStep(0);
+  }, []);
+
+  // Get From local storage on mount
   useEffect(() => {
     const _formData = localStorage.getItem("formData");
     if (!_formData) return;
     const { user: _user, step: _step } = JSON.parse(_formData);
-    setUser(_user);
-    setStep(_step);
+    if (_user && _step) {
+      setUser(_user);
+      setStep(_step);
+      return;
+    }
   }, []);
 
-
+  // Save to Local Storage on Unmount
   useEffect(() => {
     function saveToStorage() {
       localStorage.setItem("formData", JSON.stringify({ user, step }));
@@ -72,6 +83,7 @@ export const FormProvider = ({ children }: { children: ReactNode }) => {
       goToStep,
       updateUser,
       goBack,
+      deleteUser
     }}
     >
       {children}

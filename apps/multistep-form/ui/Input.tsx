@@ -1,9 +1,4 @@
-type InputType = {
-  title: string,
-  placeholder: string,
-  defaultValue?: string
-
-}
+import { InputType } from "../src/types";
 export const Input = ({ title, placeholder, defaultValue }: InputType) => {
   return (
     <div className="mb-5">

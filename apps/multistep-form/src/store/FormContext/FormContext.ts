@@ -13,5 +13,6 @@ export const FormContext = createContext<FormContextType>({
   logOut: () => null,
   goToStep: () => null,
   goBack: () => null,
+  deleteUser: () => null,
 });
 
