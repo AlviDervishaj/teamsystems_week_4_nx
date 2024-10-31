@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Layout, NotFound } from "./lazy";
+import { Cart, Details, Home, Layout, NotFound } from "./lazy";
 
 export const router = createBrowserRouter([
   {
@@ -8,8 +8,15 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        index: true,
         element: <Home />
+      },
+      {
+        path: "/cart",
+        element: <Cart />
+      },
+      {
+        path: "/products/:id",
+        element: <Details />
       },
     ],
   },

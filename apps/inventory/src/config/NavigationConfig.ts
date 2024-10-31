@@ -1,3 +1,3 @@
 export const NavigationLinks = [
-  { name: 'Home', href: '/', current: true },
+  { name: 'Home', href: '/' },
 ] as const;

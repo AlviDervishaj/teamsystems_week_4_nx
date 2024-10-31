@@ -3,8 +3,10 @@
 - [x] Layout
 - [x] Routes
 - [x] Display Content from (API)[https://fakestoreapi.com/products]
-- [ ] Add to Cart for each Product
-- [ ] Product Details (/products/:id)
-- [ ] Cart (/cart)
-- [ ] Toggle Theme
-- [ ] Reusable Components (Smart & Dumb)
+- [x] Provider
+- [x] Add to Cart for each Product
+- [x] Product Details (/products/:id)
+- [x] Add to cart on increment / decrement
+- [x] Cart (/cart)
+- [x] Toggle Theme
+- [x] Reusable Components (Smart & Dumb)
