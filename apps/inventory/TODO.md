@@ -1,0 +1,12 @@
+# Todo :
+- [x] Navigation
+- [x] Layout
+- [x] Routes
+- [x] Display Content from (API)[https://fakestoreapi.com/products]
+- [x] Provider
+- [x] Add to Cart for each Product
+- [x] Product Details (/products/:id)
+- [x] Add to cart on increment / decrement
+- [x] Cart (/cart)
+- [x] Toggle Theme
+- [x] Reusable Components (Smart & Dumb)
